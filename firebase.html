@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1 id="title">Title</h1>
+
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
+
+<script>
+    // Initialize Firebase
+    const config = {
+        apiKey: "AIzaSyBLzPD-C87YxwibhCoiqiQrKxd4_ElDuI0",
+        authDomain: "fire-reporting.firebaseapp.com",
+        databaseURL: "https://fire-reporting.firebaseio.com",
+        projectId: "fire-reporting",
+        storageBucket: "fire-reporting.appspot.com",
+        messagingSenderId: "210378394264"
+    };
+    firebase.initializeApp(config);
+
+    // Initialize Cloud Firestore through Firebase
+    var db = firebase.firestore();
+
+    // Disable deprecated features
+    db.settings({
+        timestampsInSnapshots: true
+    });
+
+    // db.collection("VIIRS").add({
+    //     location: {
+    //         Latitude: 12,
+    //         Longitude: 10
+    //     },
+    //     name: "Ada",
+    // })
+    //     .then(function (docRef) {
+    //         console.log("Document written with ID: ", docRef.id);
+    //     })
+    //     .catch(function (error) {
+    //         console.error("Error adding document: ", error);
+    //     });
+
+    db.collection("VIIRS").get().then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            // doc.data() is never undefined for query doc snapshots
+            console.log(doc.id, " => ", doc.data().name);
+        });
+    });
+
+
+</script>
+</body>
+</html>
+

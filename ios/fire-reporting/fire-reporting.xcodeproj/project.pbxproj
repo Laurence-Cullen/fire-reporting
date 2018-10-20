@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E360B4BE832BD9CE3AE8C12 /* Pods_fire_reporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A37912AA3F5B72C5B0807E4 /* Pods_fire_reporting.framework */; };
+		C83807A3217B492200921B58 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83807A2217B492200921B58 /* LoginVC.swift */; };
+		C83807A5217B4AB300921B58 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83807A4217B4AB300921B58 /* RegisterVC.swift */; };
+		C83807A7217B4F1000921B58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C83807A6217B4F1000921B58 /* GoogleService-Info.plist */; };
+		C83807AA217B6AA500921B58 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83807A9217B6AA500921B58 /* StartVC.swift */; };
+		C83807AC217B72FC00921B58 /* ReportFireVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83807AB217B72FC00921B58 /* ReportFireVC.swift */; };
 		C89F8640217B480400EC91B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89F863F217B480400EC91B4 /* AppDelegate.swift */; };
 		C89F8642217B480400EC91B4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89F8641217B480400EC91B4 /* FirstViewController.swift */; };
 		C89F8644217B480400EC91B4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89F8643217B480400EC91B4 /* SecondViewController.swift */; };
@@ -16,6 +22,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A37912AA3F5B72C5B0807E4 /* Pods_fire_reporting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fire_reporting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		644E56BCA29B4280E74006DF /* Pods-fire-reporting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fire-reporting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fire-reporting/Pods-fire-reporting.debug.xcconfig"; sourceTree = "<group>"; };
+		82959B5BF71B26F37597ABAA /* Pods-fire-reporting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fire-reporting.release.xcconfig"; path = "Pods/Target Support Files/Pods-fire-reporting/Pods-fire-reporting.release.xcconfig"; sourceTree = "<group>"; };
+		C83807A2217B492200921B58 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		C83807A4217B4AB300921B58 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		C83807A6217B4F1000921B58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C83807A9217B6AA500921B58 /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
+		C83807AB217B72FC00921B58 /* ReportFireVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportFireVC.swift; sourceTree = "<group>"; };
 		C89F863C217B480400EC91B4 /* fire-reporting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fire-reporting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C89F863F217B480400EC91B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C89F8641217B480400EC91B4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +45,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E360B4BE832BD9CE3AE8C12 /* Pods_fire_reporting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		85CB3E5E67005E9E19AD19C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				644E56BCA29B4280E74006DF /* Pods-fire-reporting.debug.xcconfig */,
+				82959B5BF71B26F37597ABAA /* Pods-fire-reporting.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C83807A8217B6A9C00921B58 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		C89F8633217B480400EC91B4 = {
 			isa = PBXGroup;
 			children = (
 				C89F863E217B480400EC91B4 /* fire-reporting */,
 				C89F863D217B480400EC91B4 /* Products */,
+				85CB3E5E67005E9E19AD19C3 /* Pods */,
+				D2239CC90EDB3271ABF014AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +89,7 @@
 		C89F863E217B480400EC91B4 /* fire-reporting */ = {
 			isa = PBXGroup;
 			children = (
+				C83807A8217B6A9C00921B58 /* New Group */,
 				C89F863F217B480400EC91B4 /* AppDelegate.swift */,
 				C89F8641217B480400EC91B4 /* FirstViewController.swift */,
 				C89F8643217B480400EC91B4 /* SecondViewController.swift */,
@@ -63,8 +97,21 @@
 				C89F8648217B480500EC91B4 /* Assets.xcassets */,
 				C89F864A217B480500EC91B4 /* LaunchScreen.storyboard */,
 				C89F864D217B480500EC91B4 /* Info.plist */,
+				C83807A6217B4F1000921B58 /* GoogleService-Info.plist */,
+				C83807A2217B492200921B58 /* LoginVC.swift */,
+				C83807A4217B4AB300921B58 /* RegisterVC.swift */,
+				C83807A9217B6AA500921B58 /* StartVC.swift */,
+				C83807AB217B72FC00921B58 /* ReportFireVC.swift */,
 			);
 			path = "fire-reporting";
+			sourceTree = "<group>";
+		};
+		D2239CC90EDB3271ABF014AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A37912AA3F5B72C5B0807E4 /* Pods_fire_reporting.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +121,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C89F8650217B480500EC91B4 /* Build configuration list for PBXNativeTarget "fire-reporting" */;
 			buildPhases = (
+				FD31DC6086718D18EF4D52FB /* [CP] Check Pods Manifest.lock */,
 				C89F8638217B480400EC91B4 /* Sources */,
 				C89F8639217B480400EC91B4 /* Frameworks */,
 				C89F863A217B480400EC91B4 /* Resources */,
+				C2AF697B10E2EFEA26B97076 /* [CP] Embed Pods Frameworks */,
+				A83DF0973EC011808702F486 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C89F864C217B480500EC91B4 /* LaunchScreen.storyboard in Resources */,
+				C83807A7217B4F1000921B58 /* GoogleService-Info.plist in Resources */,
 				C89F8649217B480500EC91B4 /* Assets.xcassets in Resources */,
 				C89F8647217B480400EC91B4 /* Main.storyboard in Resources */,
 			);
@@ -133,14 +184,96 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A83DF0973EC011808702F486 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fire-reporting/Pods-fire-reporting-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2AF697B10E2EFEA26B97076 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-fire-reporting/Pods-fire-reporting-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fire-reporting/Pods-fire-reporting-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD31DC6086718D18EF4D52FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fire-reporting-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C89F8638217B480400EC91B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C89F8644217B480400EC91B4 /* SecondViewController.swift in Sources */,
+				C83807AC217B72FC00921B58 /* ReportFireVC.swift in Sources */,
 				C89F8640217B480400EC91B4 /* AppDelegate.swift in Sources */,
+				C83807A3217B492200921B58 /* LoginVC.swift in Sources */,
+				C83807AA217B6AA500921B58 /* StartVC.swift in Sources */,
 				C89F8642217B480400EC91B4 /* FirstViewController.swift in Sources */,
+				C83807A5217B4AB300921B58 /* RegisterVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +417,7 @@
 		};
 		C89F8651217B480500EC91B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 644E56BCA29B4280E74006DF /* Pods-fire-reporting.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +436,7 @@
 		};
 		C89F8652217B480500EC91B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82959B5BF71B26F37597ABAA /* Pods-fire-reporting.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

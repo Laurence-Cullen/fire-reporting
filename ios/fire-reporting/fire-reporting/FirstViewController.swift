@@ -9,22 +9,69 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseFirestore
 import Mapbox
 
 class FirstViewController: UIViewController, MGLMapViewDelegate {
 
     @IBOutlet weak var MGLMapView: MGLMapView!
+    var reportArray = [Report]()
+    var db:Firestore!
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        db = Firestore.firestore()
+        loadData()
+        
         
         // Set the map’s center coordinate and zoom level.
         MGLMapView.setCenter(CLLocationCoordinate2D(latitude: 51.454514, longitude: -2.58791), animated: false)
         MGLMapView.zoomLevel = 10.5
         
+        // Declare the marker `hello` and set its coordinates, title, and subtitle.
+        let hello = MGLPointAnnotation()
+        hello.coordinate = CLLocationCoordinate2D(latitude: 40.7326808, longitude: -73.9843407)
+        hello.title = "Hello world!"
+        hello.subtitle = "Welcome to my marker"
+        
+        // Add marker `hello` to the map.
+        MGLMapView.addAnnotation(hello)
+        
         
     }
-        
+    
+    func loadData() {
+        let user = Auth.auth().currentUser
+        db.collection("reports")
+            .getDocuments() {
+                querySnapshot, error in
+                if let error = error {
+                    print("\(error.localizedDescription)")
+                }else{
+                    self.reportArray = querySnapshot!.documents.compactMap({Report(dictionary: $0.data())})
+                    DispatchQueue.main.async {
+                        
+                        for (report) in self.reportArray {
+                            print("kind: \(report.geoLocation)")
+                            
+                            let hello = MGLPointAnnotation()
+                            hello.coordinate = CLLocationCoordinate2D(latitude: report.lat, longitude: report.lon)
+                            hello.title = "Hello world!"
+                            hello.subtitle = report.description
+                            
+                            // Add marker `hello` to the map.
+                            self.MGLMapView.addAnnotation(hello)
+                            
+                        }
+                        
+
+                    }
+                }
+        }
+    }
     
 
 
@@ -49,5 +96,9 @@ class CustomAnnotationView: MGLAnnotationView {
         layer.borderWidth = selected ? bounds.width / 4 : 2
         layer.add(animation, forKey: "borderWidth")
     }
+    
+
+    
+    
 }
 

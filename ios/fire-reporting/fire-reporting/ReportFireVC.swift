@@ -7,23 +7,66 @@ import FirebaseFirestore
 
 class ReportFireVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    @IBOutlet weak var featuredImage: UIImageView!
+    
+    @IBOutlet weak var imagePicked: UIImageView!
+    
     var isImageSelected :Bool!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
     }
     
-    
+    var imagePicker: UIImagePickerController!
+
+    @IBAction func didTapTakePhoto(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            var imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .camera;
+            imagePicker.allowsEditing = false
+            self.present(imagePicker, animated: true, completion: nil)
+        } else {
+            print("Error")
+        }
+    }
     @IBAction func didTapAddImage(_ sender: Any) {
-        let picker = UIImagePickerController()
-        
-        picker.delegate = self
-        //               picker.allowsEditing = true
-        
-        present(picker, animated: true, completion: nil)
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            var imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary;
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+        }
     }
+    
+    
+    @objc func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
+    
+  {
+//        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+      
+        guard let image = info[UIImagePickerController.InfoKey.originalImage]
+            as? UIImage else {
+                return
+        }
+        
+        imagePicked.image = image
+        
+        
+//        imagePicked.image = image
+        dismiss(animated:true, completion: nil)
+    }
+    
+    
+    
+    
+    
+    
+    
     
     @IBAction func didTapDone(_ sender: Any) {
     }
@@ -31,33 +74,7 @@ class ReportFireVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     @IBAction func didTapGoBack(_ sender: Any) {
     }
     
-    
-    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        var selectedImageFromPicker: UIImage?
-        
-        if let editedImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
-            selectedImageFromPicker = editedImage
-        } else if let originalImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
-            
-            selectedImageFromPicker = originalImage
-        }
-        
-        if let selectedImage = selectedImageFromPicker {
-            featuredImage.image = selectedImage
-        }
-                
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        print("canceled picker")
-        dismiss(animated: true, completion: nil)
-    }
-    
-    
-    @IBAction func didTapUpload(_ sender: Any) {
-      
-    }
+ 
+
     
 }

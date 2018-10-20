@@ -198,12 +198,20 @@
                                 <rect key="frame" x="9" y="83" width="305" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btn-qe-3x3">
+                                <rect key="frame" x="135" y="361" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take photo"/>
+                                <connections>
+                                    <action selector="didTapTakePhoto:" destination="kFv-wW-bYp" eventType="touchUpInside" id="KP0-Ia-A4m"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="viO-vR-vcA"/>
                     </view>
                     <connections>
-                        <outlet property="featuredImage" destination="y6R-8D-zgk" id="mn2-HF-S8Y"/>
+                        <outlet property="imagePicked" destination="y6R-8D-zgk" id="xD6-v2-FmS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ThD-5T-Usx" userLabel="First Responder" sceneMemberID="firstResponder"/>

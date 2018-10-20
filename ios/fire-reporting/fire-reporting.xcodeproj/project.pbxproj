@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E360B4BE832BD9CE3AE8C12 /* Pods_fire_reporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A37912AA3F5B72C5B0807E4 /* Pods_fire_reporting.framework */; };
+		C8137C9E217BC64B00FCCD9D /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8137C9D217BC64B00FCCD9D /* Report.swift */; };
 		C83807A3217B492200921B58 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83807A2217B492200921B58 /* LoginVC.swift */; };
 		C83807A5217B4AB300921B58 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83807A4217B4AB300921B58 /* RegisterVC.swift */; };
 		C83807A7217B4F1000921B58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C83807A6217B4F1000921B58 /* GoogleService-Info.plist */; };
@@ -25,6 +26,7 @@
 		0A37912AA3F5B72C5B0807E4 /* Pods_fire_reporting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fire_reporting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		644E56BCA29B4280E74006DF /* Pods-fire-reporting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fire-reporting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fire-reporting/Pods-fire-reporting.debug.xcconfig"; sourceTree = "<group>"; };
 		82959B5BF71B26F37597ABAA /* Pods-fire-reporting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fire-reporting.release.xcconfig"; path = "Pods/Target Support Files/Pods-fire-reporting/Pods-fire-reporting.release.xcconfig"; sourceTree = "<group>"; };
+		C8137C9D217BC64B00FCCD9D /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		C83807A2217B492200921B58 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C83807A4217B4AB300921B58 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		C83807A6217B4F1000921B58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				C83807A4217B4AB300921B58 /* RegisterVC.swift */,
 				C83807A9217B6AA500921B58 /* StartVC.swift */,
 				C83807AB217B72FC00921B58 /* ReportFireVC.swift */,
+				C8137C9D217BC64B00FCCD9D /* Report.swift */,
 			);
 			path = "fire-reporting";
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				C89F8644217B480400EC91B4 /* SecondViewController.swift in Sources */,
 				C83807AC217B72FC00921B58 /* ReportFireVC.swift in Sources */,
 				C89F8640217B480400EC91B4 /* AppDelegate.swift in Sources */,
+				C8137C9E217BC64B00FCCD9D /* Report.swift in Sources */,
 				C83807A3217B492200921B58 /* LoginVC.swift in Sources */,
 				C83807AA217B6AA500921B58 /* StartVC.swift in Sources */,
 				C89F8642217B480400EC91B4 /* FirstViewController.swift in Sources */,
@@ -417,7 +421,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nasa.hackathon.app.fire-reporting";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -436,7 +440,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nasa.hackathon.app.fire-reporting";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

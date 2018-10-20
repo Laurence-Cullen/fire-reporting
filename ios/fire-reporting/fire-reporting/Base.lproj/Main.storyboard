@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WZz-nN-6z7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jeb-iV-JFS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,6 +21,7 @@
                     </view>
                     <connections>
                         <segue destination="WZz-nN-6z7" kind="show" identifier="goToHome" id="x9O-jq-YpZ"/>
+                        <segue destination="u1a-xt-LZR" kind="show" identifier="goToLogin" id="Iap-cj-MAM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DmC-y2-T7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -36,14 +37,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B8h-0j-xGj">
-                                <rect key="frame" x="91" y="349" width="209" height="30"/>
+                                <rect key="frame" x="83" y="171" width="209" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOK-rV-9nH">
-                                <rect key="frame" x="168" y="403" width="38" height="30"/>
+                                <rect key="frame" x="160" y="225" width="38" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
@@ -51,7 +52,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4DS-FY-8rD">
-                                <rect key="frame" x="91" y="301" width="209" height="30"/>
+                                <rect key="frame" x="83" y="123" width="209" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -64,11 +65,12 @@
                     <connections>
                         <outlet property="emailTextField" destination="4DS-FY-8rD" id="EYz-wk-AEC"/>
                         <outlet property="passwordTextField" destination="B8h-0j-xGj" id="Lz1-aL-B44"/>
+                        <segue destination="WZz-nN-6z7" kind="show" identifier="goToHome" id="T4I-7K-P7y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ayz-Pm-ZTi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1814" y="8"/>
+            <point key="canvasLocation" x="-1815.2" y="7.6461769115442282"/>
         </scene>
         <!--RegisterVC-->
         <scene sceneID="IuX-gR-OBu">
@@ -134,13 +136,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YqP-E9-0vH">
-                                <rect key="frame" x="158" y="617" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YqP-E9-0vH">
+                                <rect key="frame" x="132" y="590" width="84" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add"/>
+                                <state key="normal" image="add"/>
                                 <connections>
                                     <segue destination="kFv-wW-bYp" kind="show" id="yVR-tm-72w"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paj-MW-Zs4">
+                                <rect key="frame" x="13" y="621" width="74" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="home"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -211,6 +218,7 @@
                         <viewLayoutGuide key="safeArea" id="viO-vR-vcA"/>
                     </view>
                     <connections>
+                        <outlet property="descriptionTextView" destination="Kzb-gK-YdQ" id="DSW-Xh-i3v"/>
                         <outlet property="imagePicked" destination="y6R-8D-zgk" id="xD6-v2-FmS"/>
                     </connections>
                 </viewController>
@@ -220,9 +228,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="84" height="84"/>
         <image name="dfdadd" width="45" height="46"/>
+        <image name="home" width="20" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="yVR-tm-72w"/>
         <segue reference="Feo-Ty-RZV"/>
     </inferredMetricsTieBreakers>
 </document>

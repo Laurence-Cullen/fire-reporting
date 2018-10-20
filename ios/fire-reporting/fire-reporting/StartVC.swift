@@ -20,7 +20,7 @@ class StartVC: UIViewController {
             if user != nil {
                 self.performSegue(withIdentifier: "goToHome", sender: nil)
             }else{
-//                self.performSegue(withIdentifier: "goToInitial", sender: nil)
+                self.performSegue(withIdentifier: "goToLogin", sender: nil)
             }
         })
         

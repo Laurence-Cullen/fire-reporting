@@ -8,7 +8,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>New Age - Start Bootstrap Theme</title>
+    <title>Fire spotter</title>
+          <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,25 +26,63 @@
     <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
 
     <!-- Custom styles for this template -->
-    <link href="css/new-age.min.css" rel="stylesheet">
+      <link href="css/new-age.css" rel="stylesheet">
+<!--    <link href="css/new-age.min.css" rel="stylesheet">-->
+      
+      
+      
+      
+      <!-- Map start-->
+      
+      
+      <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+  <style>
+/*    body { margin:0; padding:0; }
+*/ 
+   #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+      
+            <!-- Map end-->
+
+      <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
 
   </head>
 
   <body id="page-top">
-
+      
+<!--      Map box styling-->
+    <style>
+        #fit {
+            display: block;
+            position: relative;
+            margin: 0px auto;
+            width: 50%;
+            height: 40px;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            font-size: 12px;
+            text-align: center;
+            color: #fff;
+            background: #ee8a65;
+        }
+    </style>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Fire.AI</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#download">Download</a>
-            </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#download">Download</a>
+                </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#features">Features</a>
             </li>
@@ -59,106 +99,138 @@
         <div class="row h-100">
           <div class="col-lg-7 my-auto">
             <div class="header-content mx-auto">
-              <h1 class="mb-5">New Age is an app landing page that will help you beautifully showcase your new mobile app, or anything else!</h1>
-              <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Start Now for Free!</a>
+              <h1 class="mb-5">Fire.A.I uses the latest in technology to keep forest fires under control</h1>
+              <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Get started!</a>
             </div>
           </div>
+            
+            
+<!--
           <div class="col-lg-5 my-auto">
             <div class="device-container">
               <div class="device-mockup iphone6_plus portrait white">
                 <div class="device">
                   <div class="screen">
+-->
                     <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                    <img src="img/demo-screen-1.jpg" class="img-fluid" alt="">
+<!--                    <img src="img/demo-screen-1.jpg" class="img-fluid" alt="">-->
+<!--
                   </div>
                   <div class="button">
+-->
                     <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+<!--
                   </div>
                 </div>
               </div>
             </div>
           </div>
+            
+-->
+            
+            
         </div>
       </div>
     </header>
 
-    <section class="download bg-primary text-center" id="download">
+    </section> 
+    <section class="features text-center" id="features">
       <div class="container">
         <div class="row">
           <div class="col-md-8 mx-auto">
-            <h2 class="section-heading">Discover what all the buzz is about!</h2>
-            <p>Our app is available on any mobile device! Download now to get started!</p>
-            <div class="badges">
-              <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
-              <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
+            <h2 class="section-heading">Our Top Features</h2>
             </div>
           </div>
+          <div class="row">
+            <div class="col-lg-3">
+                  <div class="feature-item">
+                      <i class="fas fa-fire text-primary"></i>
+<!--                    <i class="icon-screen-smartphone text-primary"></i>-->
+                    <h3>Device Mockups</h3>
+                    <p class="text-muted">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="feature-item">
+                      <i class="fas fa-camera text-primary"></i>
+<!--                    <i class="icon-camera text-primary"></i>-->
+                    <h3>Flexible Use</h3>
+                    <p class="text-muted">Put an image, video, animation, or anything else in the screen!</p>
+                  </div>
+                </div>
+              <div class="col-lg-3">
+                  <div class="feature-item">
+                      <i class="fas fa-fire-extinguisher text-primary"></i>
+<!--                    <i class="icon-present text-primary"></i>-->
+                    <h3>Get the fire under control faster</h3>
+                    <p class="text-muted">As always, this theme is free to download and use for any purpose!</p>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="feature-item">
+                      <i class="fas fa-ban text-primary"></i>
+<!--                    <i class="icon-lock-open text-primary"></i>-->
+                    <h3>Open Source</h3>
+                    <p class="text-muted">Since this theme is MIT licensed, you can use it commercially!</p>
+                  </div>
+                </div>
         </div>
       </div>
     </section>
+      <section class="map-container">
+    <div class="container-full">
+        <div class="row">
+            <div class="col-md-12">
+        <h3 class="section-header">Report and find fires across the globe</h3>
+        </div>
+        </div>  
+        <div class="row">
+            <div class="col-md-10 offset-md-1" id="map-style">
+            <div id='map'></div>
+                <br>
+<!--                <button id='fit'></button>-->
 
-    <section class="features" id="features">
+<!--            </div>-->
+        </div>
+    </div>
+          </div>
+    </section>
+
+    <section class="how_it_works features" id="how_it_works">
       <div class="container">
         <div class="section-heading text-center">
-          <h2>Unlimited Features, Unlimited Fun</h2>
-          <p class="text-muted">Check out what you can do with this app theme!</p>
-          <hr>
+          <h2>How it works</h2>
+         
         </div>
-        <div class="row">
-          <div class="col-lg-4 my-auto">
-            <div class="device-container">
+        <div class="row how_it_works how_content">
+                <div class="col-lg-6 ">
+                    <div class="device-container">
               <div class="device-mockup iphone6_plus portrait white">
                 <div class="device">
                   <div class="screen">
                     <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                    <img src="img/demo-screen-1.jpg" class="img-fluid" alt="">
+<!--                    <img src="img/demo-screen-1.jpg" class="img-fluid" alt="">
                   </div>
                   <div class="button">
                     <!-- You can hook the "home button" to some JavaScript events or just remove it -->
                   </div>
                 </div>
               </div>
+            </div>                </div>
+                <div class="col-lg-6 steps">
+                    <div>1</div>
+                    <p>Snap the fire</p>
+                    <div>2</div>
+                    <p>Upload</p>
+                    <div>3</div>
+                    <p>The map will automatically update</p>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-8 my-auto">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="feature-item">
-                    <i class="icon-screen-smartphone text-primary"></i>
-                    <h3>Device Mockups</h3>
-                    <p class="text-muted">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="feature-item">
-                    <i class="icon-camera text-primary"></i>
-                    <h3>Flexible Use</h3>
-                    <p class="text-muted">Put an image, video, animation, or anything else in the screen!</p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="feature-item">
-                    <i class="icon-present text-primary"></i>
-                    <h3>Free to Use</h3>
-                    <p class="text-muted">As always, this theme is free to download and use for any purpose!</p>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="feature-item">
-                    <i class="icon-lock-open text-primary"></i>
-                    <h3>Open Source</h3>
-                    <p class="text-muted">Since this theme is MIT licensed, you can use it commercially!</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
+    
+    
+ 
 
     <section class="cta">
       <div class="cta-content">
@@ -211,6 +283,8 @@
         </ul>
       </div>
     </footer>
+      
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -222,6 +296,56 @@
     <!-- Custom scripts for this template -->
     <script src="js/new-age.min.js"></script>
 
+      
+
+          <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoicGxhbmRyb3ZlciIsImEiOiJjam5oOHBrb2UwYWh1M3d0bGFpMjBpajNkIn0._q0D0_1hvgOxO4N1fRyWIQ';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    center: [0.1278, 51.5074],
+    zoom: 13
+});
+
+//document.getElementById('fit').addEventListener('click', function() {
+//    map.fitBounds([[
+//        -2.730,
+//        51.532,
+//        
+//    ], [
+//        -2.210,
+//        51.384
+//
+//        
+//    ]
+//                  ]);
+//});
+              
+              // Add geolocate control to the map.
+map.addControl(new mapboxgl.GeolocateControl({
+    positionOptions: {
+        enableHighAccuracy: true
+    },
+    trackUserLocation: true
+}));
+              map.addControl(new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken
+}));
+
+</script>
   </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 

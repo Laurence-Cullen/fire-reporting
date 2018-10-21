@@ -78,6 +78,7 @@ section h2 {
 }
 
 #mainNav {
+    padding-top: 40px;
   border-color: rgba(34, 34, 34, 0.05);
   background-color: white;
   -webkit-transition: all .35s;
@@ -92,20 +93,22 @@ section h2 {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
+    font-size: 30px;    
 }
 
 #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
   color: #fcbd20;
+    border-bottom: 2px solid #fdcc52;
 }
 
 #mainNav .navbar-toggler {
-  font-size: 12px;
+  font-size: 18px;
   padding: 8px 10px;
   color: #222222;
 }
 
 #mainNav .navbar-nav > li > a {
-  font-size: 11px;
+  font-size: 18px;
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -128,6 +131,9 @@ section h2 {
 #mainNav .navbar-nav > li > a:hover,
 #mainNav .navbar-nav > li > a:focus:hover {
   color: #fdcc52;
+        border-bottom: 2px solid #fdcc52;
+
+    
 }
 
 @media (min-width: 992px) {
@@ -277,6 +283,14 @@ section.download .badges .badge-link img {
   }
 }
 
+section.features .feature-item i{
+    font-size: 90px;
+}
+
+.features_display{
+    padding-left: 6%;
+    padding-right: 6%
+}
 section.features .section-heading {
   margin-bottom: 100px;
 }
@@ -416,7 +430,7 @@ footer {
   padding: 25px 0;
   text-align: center;
   color: rgba(255, 255, 255, 0.3);
-  background-color: #222222;
+    background-color: #F27D0C   ;
 }
 
 footer p {
@@ -481,6 +495,8 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 #map-style{
 height: 35vw;
 }
+#map { position:absolute; top:0; bottom:0; width:100%; }
+
 
 .section-header{
     text-align: center;
@@ -491,8 +507,7 @@ height: 35vw;
 
 .how_it_works{
     background-color: #f4f4f4;
-    padding-top: 3%;
-    height: 116%;
+    height: 70%;
 }
 .how_it_works h2 {
     text-align: center;
@@ -523,19 +538,20 @@ height: 35vw;
     font-size: 130%;
 
 }
-.how_content{
-    margin-top: -5%;
-    margin-bottom: 5%;
+#how_content{
+height: 3vw;
+/*    margin-bottom: 5%;*/
 }
 .steps div {
     color: #F27D0C;
     border: 2px solid #F27D0C;
     display: inline-block;
     border-radius: 50%;
-    height: 55px;
-    width: 55px;
+    height: 85px;
+    width: 85px;
     text-align: center;
-    padding: 5px;
+    padding: 6px;
+    padding-top: 21px;
     float: left;
     font-size: 150%;
     margin-right: 25px;
@@ -543,12 +559,13 @@ height: 35vw;
 .steps p{
     margin-bottom: 15%;
     font-size: 150%;
+    padding-top: 10px
 }
 .device-mockup>.device {
-    width: 65%;
-    height: 65%;
+    width: 85%;
+    height: 85%;
 }
 
 .device-mockup.iphone6_plus, .device-mockup.iphone6_plus.portrait{
-    margin-top: -9%
+    margin-top: -30%
 }

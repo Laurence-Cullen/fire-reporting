@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29F0091C217C32F800A96742 /* hack_ModelInterpreterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F00919217C32F800A96742 /* hack_ModelInterpreterManager.swift */; };
+		29F0091D217C32F800A96742 /* hack_UIImage+TFLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F0091A217C32F800A96742 /* hack_UIImage+TFLite.swift */; };
+		29F0091E217C32F800A96742 /* hack_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F0091B217C32F800A96742 /* hack_ViewController.swift */; };
+		29F00920217C336900A96742 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 29F0091F217C336800A96742 /* Resources */; };
 		3E360B4BE832BD9CE3AE8C12 /* Pods_fire_reporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A37912AA3F5B72C5B0807E4 /* Pods_fire_reporting.framework */; };
 		C8137C9E217BC64B00FCCD9D /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8137C9D217BC64B00FCCD9D /* Report.swift */; };
 		C83807A3217B492200921B58 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83807A2217B492200921B58 /* LoginVC.swift */; };
@@ -24,6 +28,10 @@
 
 /* Begin PBXFileReference section */
 		0A37912AA3F5B72C5B0807E4 /* Pods_fire_reporting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fire_reporting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29F00919217C32F800A96742 /* hack_ModelInterpreterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hack_ModelInterpreterManager.swift; sourceTree = "<group>"; };
+		29F0091A217C32F800A96742 /* hack_UIImage+TFLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "hack_UIImage+TFLite.swift"; sourceTree = "<group>"; };
+		29F0091B217C32F800A96742 /* hack_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hack_ViewController.swift; sourceTree = "<group>"; };
+		29F0091F217C336800A96742 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 		644E56BCA29B4280E74006DF /* Pods-fire-reporting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fire-reporting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fire-reporting/Pods-fire-reporting.debug.xcconfig"; sourceTree = "<group>"; };
 		82959B5BF71B26F37597ABAA /* Pods-fire-reporting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fire-reporting.release.xcconfig"; path = "Pods/Target Support Files/Pods-fire-reporting/Pods-fire-reporting.release.xcconfig"; sourceTree = "<group>"; };
 		C8137C9D217BC64B00FCCD9D /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
@@ -84,6 +92,10 @@
 		C89F863E217B480400EC91B4 /* fire-reporting */ = {
 			isa = PBXGroup;
 			children = (
+				29F0091F217C336800A96742 /* Resources */,
+				29F00919217C32F800A96742 /* hack_ModelInterpreterManager.swift */,
+				29F0091A217C32F800A96742 /* hack_UIImage+TFLite.swift */,
+				29F0091B217C32F800A96742 /* hack_ViewController.swift */,
 				C89F863F217B480400EC91B4 /* AppDelegate.swift */,
 				C89F8641217B480400EC91B4 /* FirstViewController.swift */,
 				C89F8643217B480400EC91B4 /* SecondViewController.swift */,
@@ -173,6 +185,7 @@
 				C83807A7217B4F1000921B58 /* GoogleService-Info.plist in Resources */,
 				C89F8649217B480500EC91B4 /* Assets.xcassets in Resources */,
 				C89F8647217B480400EC91B4 /* Main.storyboard in Resources */,
+				29F00920217C336900A96742 /* Resources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,9 +267,12 @@
 				C83807AC217B72FC00921B58 /* ReportFireVC.swift in Sources */,
 				C89F8640217B480400EC91B4 /* AppDelegate.swift in Sources */,
 				C8137C9E217BC64B00FCCD9D /* Report.swift in Sources */,
+				29F0091D217C32F800A96742 /* hack_UIImage+TFLite.swift in Sources */,
 				C83807A3217B492200921B58 /* LoginVC.swift in Sources */,
 				C83807AA217B6AA500921B58 /* StartVC.swift in Sources */,
+				29F0091E217C32F800A96742 /* hack_ViewController.swift in Sources */,
 				C89F8642217B480400EC91B4 /* FirstViewController.swift in Sources */,
+				29F0091C217C32F800A96742 /* hack_ModelInterpreterManager.swift in Sources */,
 				C83807A5217B4AB300921B58 /* RegisterVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,7 +421,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = LNRE94YM4N;
 				INFOPLIST_FILE = "fire-reporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -413,6 +429,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nasa.hackathon.app.fire-reporting";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -424,14 +441,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = LNRE94YM4N;
 				INFOPLIST_FILE = "fire-reporting/Info.plist";
+				"INSTALL_OWNER[sdk=*]" = "$(USER)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nasa.hackathon.app.fire-reporting";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

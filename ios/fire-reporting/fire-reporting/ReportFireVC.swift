@@ -8,7 +8,9 @@ import CoreLocation
 
 class ReportFireVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate
  {
-    
+    /// Model interpreter manager that manages loading models and detecting objects.
+    private lazy var modelManager = ModelInterpreterManager()
+
     
     @IBOutlet weak var imagePicked: UIImageView!
     
@@ -87,7 +89,48 @@ class ReportFireVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        // perform inferance
+        // ------------------------------------------------------------
         imagePicked.image = image
+        
+        setUpLocalModel()
+        
+        print("Loading the local model...\n")
+        if !modelManager.loadLocalModel(isQuantized: false) {
+            print("Failed to load the local model.")
+            return
+        }
+        print("Starting inference...\n")
+        
+        let isQuantized = false
+        DispatchQueue.global(qos: .userInitiated).async {
+            var imageData: Any?
+            if isQuantized {
+                imageData = self.modelManager.scaledImageData(from: image,
+                                                              componentsCount: 3)
+            } else {
+                imageData = self.modelManager.scaledPixelArray(from: image,
+                                                               componentsCount: 3,
+                                                               isQuantized: isQuantized)
+            }
+            
+            self.modelManager.detectObjects(in: imageData) { (results, error) in
+                guard error == nil, let results = results, !results.isEmpty else {
+                    var errorString = error?.localizedDescription ?? Constants.failedToDetectObjectsMessage
+                    errorString = "Inference error: \(errorString)"
+                    print(errorString)
+                    return
+                }
+                
+                print(self.detectionResultsString(fromResults: results))
+                
+            }
+        }
+        
+        // end inferance
+        // ------------------------------------------------------------
+        
         dismiss(animated:true, completion: nil)
     }
     
@@ -147,12 +190,6 @@ class ReportFireVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         
     }
     
-    
-    
-    
-    
-    
-    
     @IBAction func didTapDone(_ sender: Any) {
         storeReport()
     }
@@ -160,7 +197,25 @@ class ReportFireVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     @IBAction func didTapGoBack(_ sender: Any) {
     }
     
- 
+    /// Sets up the local model.
+    private func setUpLocalModel() {
+        let name = ModelInterpreterConstants.floatModelFilename
+        let filename = ModelInterpreterConstants.floatModelFilename
+        if !self.modelManager.setUpLocalModel(withName: name, filename: filename) {
+            print("\nFailed to set up the local model.")
+        }
+    }
+    
+    /// Returns a string representation of the detection results.
+    private func detectionResultsString(
+        fromResults results: [(label: String, confidence: Float)]?
+        ) -> String {
+        guard let results = results else { return Constants.failedToDetectObjectsMessage }
+        return results.reduce("") { (resultString, result) -> String in
+            let (label, confidence) = result
+            return resultString + "\(label): \(String(describing: confidence))\n"
+        }
+    }
 
     
 }
@@ -231,6 +286,9 @@ extension UIImage {
         
         completion(UIImage(data: imageData)!, compressionQuality)
     }
-    
-    
+}
+
+// MARK: - Constants
+private enum Constants {
+    static let failedToDetectObjectsMessage = "Failed to detect objects in image."
 }

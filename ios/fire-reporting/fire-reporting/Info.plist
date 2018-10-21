@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>fire-reporting</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -20,6 +22,12 @@
 	<true/>
 	<key>MGLMapboxAccessToken</key>
 	<string>pk.eyJ1Ijoid2lsc29uc2hyZXN0aGEiLCJhIjoiY2puaGVxMnhvMDMxazNrdGQ3NjBvNG1yYyJ9.RjTDmMKMC_-haLlQv5Uj3g</string>
+	<key>NSCameraUsageDescription</key>
+	<string>We need to access your camera to verify your report.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We need to access to your locagtion to verify your report.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need to access to your locagtion to verify your report.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>We need access to your photo.</string>
 	<key>UILaunchStoryboardName</key>
@@ -53,11 +61,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>We need to access your camera to verify your report.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We need to access to your locagtion to verify your report.</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>We need to access to your locagtion to verify your report.</string>
 </dict>
 </plist>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Add custom icons with Markers</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<h1 id="bigOne"></h1>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBLzPD-C87YxwibhCoiqiQrKxd4_ElDuI0",
+    authDomain: "fire-reporting.firebaseapp.com",
+    databaseURL: "https://fire-reporting.firebaseio.com",
+    projectId: "fire-reporting",
+    storageBucket: "fire-reporting.appspot.com",
+    messagingSenderId: "210378394264"
+  };
+  firebase.initializeApp(config);
+    
+    var bigOne = document.getElementById('bigOne');
+    var dbRef = firebase.database().ref().child('text');
+    dbRef.on('value', snap => bigOne.innerText = snap.val());
+</script>
+
+</body>
+</html>

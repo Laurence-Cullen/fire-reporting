@@ -76,6 +76,14 @@ section {
 section h2 {
   font-size: 50px;
 }
+section h2:after {
+   display: block;
+    height: 3px;
+    background-color: #F27D0C;
+    content: " ";
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 30px;}
 
 #mainNav {
     padding-top: 40px;
@@ -282,17 +290,30 @@ section.download .badges .badge-link img {
     font-size: 70px;
   }
 }
+section.features{
+    color: #555;
+}
+section.features h2{
+font-size: 300%;
+    text-transform: uppercase;
+}
+
+section.features p{
+font-size: 150%;
+}
+
 
 section.features .feature-item i{
     font-size: 90px;
 }
+
 
 .features_display{
     padding-left: 6%;
     padding-right: 6%
 }
 section.features .section-heading {
-  margin-bottom: 100px;
+  margin-bottom: 46px;
 }
 
 section.features .section-heading h2 {
@@ -511,9 +532,9 @@ height: 35vw;
 }
 .how_it_works h2 {
     text-align: center;
-    color: #F27D0C;
+    color: #555;
     margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 13%;
     text-transform: uppercase;
     font-weight: 200;
     font-size: 42px;
@@ -539,7 +560,7 @@ height: 35vw;
 
 }
 #how_content{
-height: 3vw;
+/*height: 3vw;*/
 /*    margin-bottom: 5%;*/
 }
 .steps div {

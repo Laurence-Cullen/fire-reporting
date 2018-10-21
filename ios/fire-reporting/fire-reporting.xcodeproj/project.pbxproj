@@ -63,13 +63,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		C83807A8217B6A9C00921B58 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		C89F8633217B480400EC91B4 = {
 			isa = PBXGroup;
 			children = (
@@ -91,7 +84,6 @@
 		C89F863E217B480400EC91B4 /* fire-reporting */ = {
 			isa = PBXGroup;
 			children = (
-				C83807A8217B6A9C00921B58 /* New Group */,
 				C89F863F217B480400EC91B4 /* AppDelegate.swift */,
 				C89F8641217B480400EC91B4 /* FirstViewController.swift */,
 				C89F8643217B480400EC91B4 /* SecondViewController.swift */,

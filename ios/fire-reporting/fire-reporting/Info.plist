@@ -59,5 +59,7 @@
 	<string>We need to access to your locagtion to verify your report.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>We need to access to your locagtion to verify your report.</string>
+	<key>MGLMapboxMetricsEnabledSettingShownInApp</key>
+	<string>YES</string>
 </dict>
 </plist>

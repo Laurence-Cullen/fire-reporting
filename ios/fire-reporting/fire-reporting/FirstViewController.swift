@@ -14,7 +14,7 @@ import Mapbox
 
 class FirstViewController: UIViewController, MGLMapViewDelegate {
 
-    @IBOutlet weak var MGLMapView: MGLMapView!
+    @IBOutlet weak var mapView: MGLMapView!
     var reportArray = [Report]()
     var db:Firestore!
 
@@ -27,24 +27,17 @@ class FirstViewController: UIViewController, MGLMapViewDelegate {
         loadData()
         
         
+        mapView.logoView.isHidden = true
+        mapView.attributionButton.isHidden = true
+        
+        
         // Set the map’s center coordinate and zoom level.
-        MGLMapView.setCenter(CLLocationCoordinate2D(latitude: 51.454514, longitude: -2.58791), animated: false)
-        MGLMapView.zoomLevel = 10.5
-        
-        // Declare the marker `hello` and set its coordinates, title, and subtitle.
-        let hello = MGLPointAnnotation()
-        hello.coordinate = CLLocationCoordinate2D(latitude: 40.7326808, longitude: -73.9843407)
-        hello.title = "Hello world!"
-        hello.subtitle = "Welcome to my marker"
-        
-        // Add marker `hello` to the map.
-        MGLMapView.addAnnotation(hello)
-        
+        mapView.setCenter(CLLocationCoordinate2D(latitude: 51.454514, longitude: -2.58791), animated: false)
+        mapView.zoomLevel = 10.5
         
     }
     
     func loadData() {
-        let user = Auth.auth().currentUser
         db.collection("reports")
             .getDocuments() {
                 querySnapshot, error in
@@ -57,13 +50,36 @@ class FirstViewController: UIViewController, MGLMapViewDelegate {
                         for (report) in self.reportArray {
                             print("kind: \(report.geoLocation)")
                             
-                            let hello = MGLPointAnnotation()
-                            hello.coordinate = CLLocationCoordinate2D(latitude: report.lat, longitude: report.lon)
-                            hello.title = "Hello world!"
-                            hello.subtitle = report.description
+//                            let hello = MGLPointAnnotation()
+//                            hello.coordinate = CLLocationCoordinate2D(latitude: report.lat, longitude: report.lon)
+//                            hello.title = "Hello world!"
+//                            hello.subtitle = report.description
+//
+//                            // Add marker `hello` to the map.
+//                            self.MGLMapView.addAnnotation(hello)
                             
-                            // Add marker `hello` to the map.
-                            self.MGLMapView.addAnnotation(hello)
+                            
+                            
+        
+                            
+                            let annotation = MGLPointAnnotation()
+                            annotation.coordinate = CLLocationCoordinate2D(latitude: report.lat, longitude: report.lon)
+                            annotation.title = report.eventID
+                            annotation.subtitle = "Hello World"
+                            
+                            
+                       
+                            
+                            self.mapView.addAnnotation(annotation)
+                            
+                            // Pop-up the callout view.
+//                            self.mapView.selectAnnotation(annotation, animated: true)
+                            
+                            self.mapView.delegate = self
+
+                            
+                            
+                            
                             
                         }
                         
@@ -73,32 +89,40 @@ class FirstViewController: UIViewController, MGLMapViewDelegate {
         }
     }
     
-
-
-}
-
-class CustomAnnotationView: MGLAnnotationView {
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        // Use CALayer’s corner radius to turn this view into a circle.
-        layer.cornerRadius = bounds.width / 2
-        layer.borderWidth = 2
-        layer.borderColor = UIColor.white.cgColor
+    
+   
+    
+    func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
+        return true
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    func mapView(_ mapView: MGLMapView, leftCalloutAccessoryViewFor annotation: MGLAnnotation) -> UIView? {
+        if (annotation.title! == annotation.description) {
+            // Callout height is fixed; width expands to fit its content.
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 60, height: 50))
+            label.textAlignment = .right
+            label.textColor = UIColor(red: 0.81, green: 0.71, blue: 0.23, alpha: 1)
+            label.text = "金閣寺"
+            
+            return label
+        }
         
-        // Animate the border width in/out, creating an iris effect.
-        let animation = CABasicAnimation(keyPath: "borderWidth")
-        animation.duration = 0.1
-        layer.borderWidth = selected ? bounds.width / 4 : 2
-        layer.add(animation, forKey: "borderWidth")
+        return nil
     }
     
+    func mapView(_ mapView: MGLMapView, rightCalloutAccessoryViewFor annotation: MGLAnnotation) -> UIView? {
+        return UIButton(type: .detailDisclosure)
+    }
+    
+    func mapView(_ mapView: MGLMapView, annotation: MGLAnnotation, calloutAccessoryControlTapped control: UIControl) {
+        mapView.deselectAnnotation(annotation, animated: false)
+        
+        
+        
+    }
+    
+    
 
-    
-    
+
 }
 

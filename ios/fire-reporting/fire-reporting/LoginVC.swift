@@ -12,12 +12,14 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailTextField.becomeFirstResponder()
         
         db = Firestore.firestore()
         
           emailTextField.text = "john.doe@email.com"
             passwordTextField.text = "password"
+        
+        self.hideKeyboardWhenTappedAround()
+
         
     }
     
@@ -96,4 +98,16 @@ class LoginVC: UIViewController {
         }
     }
     
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

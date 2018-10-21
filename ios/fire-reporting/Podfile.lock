@@ -109,6 +109,7 @@ PODS:
   - GTMSessionFetcher/Core (1.2.0)
   - GTMSessionFetcher/Full (1.2.0):
     - GTMSessionFetcher/Core (= 1.2.0)
+  - IQKeyboardManager (6.1.1)
   - leveldb-library (1.20)
   - Mapbox-iOS-SDK (4.2.0)
   - nanopb (0.3.8):
@@ -126,6 +127,7 @@ DEPENDENCIES:
   - Firebase/MLVisionLabelModel
   - Firebase/Storage
   - FirebaseFirestore
+  - IQKeyboardManager
   - Mapbox-iOS-SDK
 
 SPEC CHECKSUMS:
@@ -149,11 +151,12 @@ SPEC CHECKSUMS:
   gRPC-ProtoRPC: 842797fbe05dfcf891afb4a5048e5ccf5f06ef86
   gRPC-RxLibrary: fa6852f98d6ec0b73c0ec2f6406c26943099d501
   GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
+  IQKeyboardManager: 79c57795f5c2408d259d37b9da2ed07efcbb5225
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   Mapbox-iOS-SDK: 706d52e3ad095e16944d9643f37d5a97627f6c19
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
 
-PODFILE CHECKSUM: 31e462ccecf0babd9ebbb27cca99b09bf5f78e35
+PODFILE CHECKSUM: 1ce47f9239e77c426898a3b679add7456a43722b
 
 COCOAPODS: 1.4.0

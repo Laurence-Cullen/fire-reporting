@@ -38,11 +38,14 @@
       <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+<!--
   <style>
 /*    body { margin:0; padding:0; }
 */ 
    #map { position:absolute; top:0; bottom:0; width:100%; }
+      
   </style>
+-->
       
             <!-- Map end-->
 
@@ -80,14 +83,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="#download">Download</a>
-                </li>
+               
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#features">Features</a>
             </li>
+               <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#try">Try</a>
+                </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="#how_it_works">How it works</a>
             </li>
           </ul>
         </div>
@@ -133,15 +137,14 @@
       </div>
     </header>
 
-    </section> 
     <section class="features text-center" id="features">
-      <div class="container">
+      <div class="container-full">
         <div class="row">
           <div class="col-md-8 mx-auto">
             <h2 class="section-heading">Our Top Features</h2>
             </div>
           </div>
-          <div class="row">
+          <div class="row features_display">
             <div class="col-lg-3">
                   <div class="feature-item">
                       <i class="fas fa-fire text-primary"></i>
@@ -177,7 +180,7 @@
         </div>
       </div>
     </section>
-      <section class="map-container">
+      <section class="map-container" id="try">
     <div class="container-full">
         <div class="row">
             <div class="col-md-12">
@@ -232,41 +235,7 @@
     
  
 
-    <section class="cta">
-      <div class="cta-content">
-        <div class="container">
-          <h2>Stop waiting.<br>Start building.</h2>
-          <a href="#contact" class="btn btn-outline btn-xl js-scroll-trigger">Let's Get Started!</a>
-        </div>
-      </div>
-      <div class="overlay"></div>
-    </section>
-
-    <section class="contact bg-primary" id="contact">
-      <div class="container">
-        <h2>We
-          <i class="fas fa-heart"></i>
-          new friends!</h2>
-        <ul class="list-inline list-social">
-          <li class="list-inline-item social-twitter">
-            <a href="#">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li class="list-inline-item social-facebook">
-            <a href="#">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </li>
-          <li class="list-inline-item social-google-plus">
-            <a href="#">
-              <i class="fab fa-google-plus-g"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
+   
     <footer>
       <div class="container">
         <p>&copy; Your Website 2018. All Rights Reserved.</p>
@@ -282,6 +251,7 @@
           </li>
         </ul>
       </div>
+
     </footer>
       
 
@@ -299,10 +269,10 @@
       
 
           <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoicGxhbmRyb3ZlciIsImEiOiJjam5oOHBrb2UwYWh1M3d0bGFpMjBpajNkIn0._q0D0_1hvgOxO4N1fRyWIQ';
+mapboxgl.accessToken = 'pk.eyJ1IjoicGxhbmRyb3ZlciIsImEiOiJjam5oOHBrb2UwYWh1M3d0bGFpMjBpajNkIn0._q0D0_1hvgOxO4N1fRyWIQ';
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
+    style: 'mapbox://styles/plandrover/cjni4g1p75ymy2rq8gtprd7u2',
     center: [0.1278, 51.5074],
     zoom: 13
 });
@@ -331,8 +301,19 @@ map.addControl(new mapboxgl.GeolocateControl({
               map.addControl(new MapboxGeocoder({
     accessToken: mapboxgl.accessToken
 }));
-
+   
 </script>
+      
+<!--      Database start-->
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
+      <script>
+          const firebase = require("firebase");
+// Required for side-effects
+require("firebase/firestore");
+      </script>
+<!--      Database end-->
+      
   </body>
 
 </html>
